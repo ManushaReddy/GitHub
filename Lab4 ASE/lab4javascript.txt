@@ -1,0 +1,59 @@
+var stores = Array();
+var input1 = document.getElementById('name');
+
+var returnMsg;
+
+function clearStorage() {
+    stores = Array();
+    localStorage.clear("database");
+    document.getElementById('write').innerHTML = "storage cleared.";
+}
+
+function saveStatusLocally() {
+    var stringToSave = document.getElementById('name').value;
+   
+    if ((stringToSave == null) || (stringToSave == "") ) {
+        document.getElementById('write').innerHTML = "nothing to store.";
+    } else {
+        stores.push(stringToSave);
+        
+        input1.value = "";
+        
+        window.localStorage.setItem("database", stores.join(" "));
+
+        document.getElementById('write').innerHTML = "data stored.";
+
+        setTimeout(function () {
+            document.getElementById('write').innerHTML = "";
+        }, 1000);
+
+    }
+}
+
+
+function readStatus() {
+
+    if (window.localStorage.getItem("database") == null) {
+        document.getElementById('write').innerHTML = "nothing stored.";
+    } else {
+        document.getElementById('write').innerHTML = "You Values: " + window.localStorage.getItem("database");
+    }
+}
+
+function clearStorage2() {
+
+    stores = Array();
+    localStorage.clear("database");
+    document.getElementById('write2').innerHTML = "storage cleared.";
+}
+
+function readStatus2() {
+
+    if (window.localStorage.getItem("database") == null) {
+        document.getElementById('write').innerHTML = "nothing stored.";
+    } else {
+        document.getElementById('write2').innerHTML = "Welcome " + window.localStorage.getItem("database");
+    }
+}
+
+src = "//platform.twitter.com/widgets.js"

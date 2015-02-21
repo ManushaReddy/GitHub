@@ -1,0 +1,48 @@
+<div data-role="page" id="page1">
+    <div id="Header" data-role="header">
+        <h1>ASE Lab4</h1>
+    </div>
+    <input type="text"id="name" placeholder="Username"/>
+    <input type="password"id="password" placeholder="password" />
+    
+   
+    <div data-role="content">     
+          <p><a id="button" onclick="saveStatusLocally()" href="#Page2" data-role="button"data-transition="pop" >Login</a></p> 	               
+    </div>
+        </div>
+
+    <div data-role="page" id="Page2">
+     <div id="Header" data-role="header">
+     	  
+          <h1>Mashup</h1>
+
+    </div>
+        
+        <b><a onclick="readStatus2()">Click to view login details</a></b>
+        <br></br>
+<div id="write2"></div>
+        <br></br>
+    <p>
+        <h> <b> Charts </b> 
+        </h>
+    </p>
+        <p><b>Pie Chart</b></p>
+        <img src="https://chart.googleapis.com/chart?chs=250x100&chd=t:80,20&cht=p3&chl=Success|Failure" height="100" width="300"/>
+    
+        <p><b>Finance chart</b></p>
+    <img src="http://chart.finance.yahoo.com/z?s=GOOG&t=12m&q=l&z=l&p=m50,m200
+" height="100" width="300"/>
+        
+       <div id="twitter">
+        
+       
+          <b> <a href="https://twitter.com/share" class="twitter-share-button" >
+Share Via Twitter
+              </a></b>
+<script>
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+</script>
+        </div>
+    
+
+ 

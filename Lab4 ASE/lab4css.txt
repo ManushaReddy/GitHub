@@ -1,0 +1,6 @@
+#button {
+    color: #6699CC;
+}
+#Header {
+    background: #6699CC;
+}
